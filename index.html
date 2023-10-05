@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Board Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="banner">Please upload only JPG files.</div>
+    <div class="toolbar">
+        <button id="uploadImage">Upload Image</button>
+        <input type="file" id="imageInput" hidden>
+        <button id="addText">Add Text</button>
+        <select id="imageFilter">
+            <option value="none">No Filter</option>
+            <option value="grayscale(100%)">Grayscale</option>
+            <option value="sepia(100%)">Sepia</option>
+            <option value="invert(100%)">Invert</option>
+            <option value="blur(3px)">Blur</option>
+        </select>
+        <input type="color" id="bgColorPicker" title="Choose a background color">
+        <input type="file" id="bgImageInput" title="Upload a background image" hidden>
+        <button id="uploadBgImage">Set Background Image</button>
+        <button id="exportMoodboard">Export</button>
+        <button id="saveMoodboard">Save</button>
+        <button id="loadMoodboard">Load</button>
+    </div>
+    <div class="color-palette" id="colorPalette"></div>
+    <div class="moodboard" id="moodboard"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>
